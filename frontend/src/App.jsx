@@ -1,9 +1,14 @@
-// import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
