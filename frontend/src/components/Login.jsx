@@ -73,7 +73,7 @@ const Login = () => {
             </div>
             {/* Remember Me */}
             <div className={`${styles.normalFlex} justify-between`}>
-              <div className={`${styles.normalFlex}`}>
+              <div className={`${styles.normalFlex} gap-2`}>
                 <input
                   type="checkbox"
                   name="remember-me"
@@ -82,7 +82,7 @@ const Login = () => {
                 />
                 <label
                   htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-900"
+                  className="block text-sm text-gray-900"
                 >
                   Remember me
                 </label>
@@ -107,9 +107,9 @@ const Login = () => {
               </button>
             </div>
             {/* Link to Sign up Page */}
-            <div className={`${styles.normalFlex} w-full`}>
-              <h4>Not have any account?</h4>
-              <Link to="/sign-up" className="text-blue-600 pl-2">
+            <div className={`${styles.normalFlex} w-full gap-2`}>
+              <h4>Don&apos;t have an account?</h4>
+              <Link to="/sign-up" className="text-blue-600">
                 Sign up
               </Link>
             </div>
