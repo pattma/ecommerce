@@ -35,6 +35,7 @@ const Register = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   autoComplete="name"
+                  placeholder="First and last name"
                   required
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
@@ -81,16 +82,22 @@ const Register = () => {
                 {visible ? (
                   <AiOutlineEye
                     className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    color="#616161"
+                    size={20}
                     onClick={() => setVisible(false)}
                   />
                 ) : (
                   <AiOutlineEyeInvisible
                     className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    color="#616161"
+                    size={20}
                     onClick={() => setVisible(true)}
                   />
                 )}
+              </div>
+              <div className="text-xs mt-1">
+                <label className="text-red-500">*</label>
+                &nbsp;Passwords must be at least 8 characters.
               </div>
             </div>
             {/* Re-enter Password */}
@@ -114,13 +121,15 @@ const Register = () => {
                 {visible ? (
                   <AiOutlineEye
                     className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    color="#616161"
+                    size={20}
                     onClick={() => setVisible(false)}
                   />
                 ) : (
                   <AiOutlineEyeInvisible
                     className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    color="#616161"
+                    size={20}
                     onClick={() => setVisible(true)}
                   />
                 )}
@@ -132,7 +141,7 @@ const Register = () => {
                 type="submit"
                 className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Submit
+                Continue
               </button>
             </div>
             {/* Conditions of use and Privacy Notice */}
@@ -149,6 +158,7 @@ const Register = () => {
                 .
               </label>
             </div>
+            <hr />
             {/* Link to Log in Page */}
             <div className={`${styles.normalFlex} w-full gap-2`}>
               <h4>Already have an account?</h4>

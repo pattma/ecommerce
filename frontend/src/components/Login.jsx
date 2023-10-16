@@ -59,13 +59,15 @@ const Login = () => {
                 {visible ? (
                   <AiOutlineEye
                     className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    color="#616161"
+                    size={20}
                     onClick={() => setVisible(false)}
                   />
                 ) : (
                   <AiOutlineEyeInvisible
                     className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    color="#616161"
+                    size={20}
                     onClick={() => setVisible(true)}
                   />
                 )}
@@ -103,9 +105,24 @@ const Login = () => {
                 type="submit"
                 className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Submit
+                Continue
               </button>
             </div>
+            {/* Conditions of use and Privacy Notice */}
+            <div className={`${styles.normalFlex} w-full gap-2`}>
+              <label className="text-sm">
+                By creating an account, you agree to UniStay&apos;s <br />
+                <Link to="" className="text-blue-600">
+                  Conditions of Use
+                </Link>
+                &nbsp;and&nbsp;
+                <Link to="" className="text-blue-600">
+                  Privacy Notice
+                </Link>
+                .
+              </label>
+            </div>
+            <hr />
             {/* Link to Sign up Page */}
             <div className={`${styles.normalFlex} w-full gap-2`}>
               <h4>Don&apos;t have an account?</h4>
