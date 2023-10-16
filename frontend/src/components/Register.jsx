@@ -162,7 +162,7 @@ const Register = () => {
             {/* Link to Log in Page */}
             <div className={`${styles.normalFlex} w-full gap-2`}>
               <h4>Already have an account?</h4>
-              <Link to="/sign-up" className="text-blue-600">
+              <Link to="/login" className="text-blue-600">
                 Log in
               </Link>
             </div>

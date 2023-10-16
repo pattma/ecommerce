@@ -126,7 +126,7 @@ const Login = () => {
             {/* Link to Sign up Page */}
             <div className={`${styles.normalFlex} w-full gap-2`}>
               <h4>Don&apos;t have an account?</h4>
-              <Link to="/sign-up" className="text-blue-600">
+              <Link to="/register" className="text-blue-600">
                 Sign up
               </Link>
             </div>
