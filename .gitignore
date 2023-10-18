@@ -1,6 +1,13 @@
-# dependencies
+# Dependencies
 .env
 **/node_modules
+
+# Ignore files and folders with "-test" in their name
+*-test.js
+
+# Ignore specific directories
+/backend/uploads
+/frontend/src/static
 
 npm-debug.log*
 yarn-debug.log*

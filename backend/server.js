@@ -2,7 +2,7 @@ const app = require("./app");
 const connectDatabase = require("./db/Database");
 
 // The 'process' core module of Node.js provides the 'env' property
-const { DOMAIN_NAME, PORT } = process.env;
+const { PORT, HOST } = process.env;
 
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
@@ -15,12 +15,12 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "../backend/config/.env" });
 }
 
-// Connect DB
+// Connect db
 connectDatabase();
 
 // Create server
-const server = app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+const server = app.listen(PORT, HOST, () => {
+  console.log(`Server is running on http://${HOST}:${PORT}`);
 });
 
 // Unhandled promise rejection
