@@ -2,6 +2,9 @@
 .env
 **/node_modules
 
+# Ignore the "uploads" folder in the backend directory
+backend/uploads/*
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
