@@ -27,7 +27,7 @@ const Register = () => {
     axios
       .post(`${server}/user/create-account`, newForm, config)
       .then((res) => {
-        console.log(res);
+        alert(res.message);
       })
       .catch((err) => {
         console.log(err);
@@ -127,7 +127,7 @@ const Register = () => {
               </div>
               <div className="text-xs mt-1">
                 <label className="text-red-500">*</label>
-                &nbsp;Passwords must be at least 8 characters.
+                &nbsp;Passwords must be at least 4 characters.
               </div>
             </div>
             {/* Profile image */}
